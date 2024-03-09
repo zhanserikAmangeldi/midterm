@@ -10,12 +10,11 @@ import com.example.aviatickets.model.entity.Offer
 class OfferListAdapter : RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
 
     private val items: ArrayList<Offer> = arrayListOf()
-
     fun setItems(offerList: List<Offer>) {
-        items.clear()
-        items.addAll(offerList)
-        notifyDataSetChanged()
-
+        this.items.clear()
+        this.items.addAll(offerList)
+        println(this.items)
+         notifyDataSetChanged()
         /**
          * think about recycler view optimization using diff.util
          */
